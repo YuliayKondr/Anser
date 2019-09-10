@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:WpfApp1">
+    <RadialGradientBrush x:Key="Blick" GradientOrigin="0.2,0.3" RadiusY="0.8" RadiusX="0.6">
+        <GradientStop Color="Black" Offset="1"/>
+        <GradientStop Color="DarkGray" Offset="0.3"/>
+        <GradientStop Color="White" Offset="0"/>
+    </RadialGradientBrush>
+    <RadialGradientBrush x:Key="BlikRed" GradientOrigin="0.2,0.3" RadiusY="1.2" RadiusX="0.8">
+        <GradientStop Color="#8B0000" Offset="1"/>
+        <GradientStop Color="#DC143C" Offset="0.3"/>
+        <GradientStop Color="#FFDAB9" Offset="0"/>
+    </RadialGradientBrush>
+    
+</ResourceDictionary>
