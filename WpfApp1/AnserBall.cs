@@ -9,6 +9,7 @@ namespace WpfApp1
 {
     public class AnserBall:INotifyPropertyChanged
     {
+        private static string anser;
         private static string[] massAnser = new string[]
             {
                 "Бесспорно",
@@ -35,7 +36,8 @@ namespace WpfApp1
         public static string Anser()
         {
             Random random = new Random();
-            return massAnser[random.Next(0, 20)];
+            anser = massAnser[random.Next(0, 20)];
+            return anser;
         }
         private string _privet;
         public string Privet
@@ -45,7 +47,8 @@ namespace WpfApp1
         }
         public string Durish()
         {
-            return "Ты меня дуришь";
+            anser = "Ты меня дуришь";
+            return anser;
         }
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName]string prop="")
@@ -53,6 +56,10 @@ namespace WpfApp1
             if (PropertyChanged != null)
                 PropertyChanged(this, new PropertyChangedEventArgs(prop));
         }
-             
+        public override string ToString()
+        {
+            return anser;
+        }
+
     }
 }
